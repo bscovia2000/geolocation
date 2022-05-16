@@ -1,4 +1,5 @@
 pipeline {
+
      agent any
      tools {
   maven 'M2_HOMW'
@@ -22,14 +23,9 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo 'Deploy Step'
-                sleep 10
+                step'Deploy Step'
+                
             }
         }
-        stage('Docker') {
-            steps {
-                echo 'Image step'
-            }
-        }
-    }
-}
+    
+    
